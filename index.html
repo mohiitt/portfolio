@@ -315,6 +315,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
 </section>
 
 <!-- HACKATHONS -->
+<!-- HACKATHONS -->
 <section id="hackathons" class="section">
   <div class="container">
     <div class="section-header reveal">
@@ -323,6 +324,37 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
       <div class="section-rule"></div>
     </div>
     <div class="hackathon-grid">
+
+      <!-- Rivalis — featured -->
+      <div class="hackathon-card featured-hack reveal">
+        <div class="hack-inner">
+          <div class="hack-left">
+            <div class="hack-eyebrow">Competitive Intelligence Hackathon 2026</div>
+            <div class="hack-project-name">Rivalis</div>
+            <div class="hack-meta-row">
+              <span class="hack-date">2026</span>
+              <span class="hack-sep"></span>
+              <span class="hack-badge submitted">Built</span>
+            </div>
+            <div class="hack-stack">
+              <span class="stack-tag purple">Claude API</span>
+              <span class="stack-tag purple">LangGraph</span>
+              <span class="stack-tag blue">CopilotKit</span>
+              <span class="stack-tag blue">Redis</span>
+              <span class="stack-tag gold">W&B Weave</span>
+              <span class="stack-tag">FastAPI</span>
+            </div>
+            <p class="hack-desc">An AI-powered competitive intelligence engine and acquisition war-game simulator. Enter any company or startup idea — a swarm of five specialized agents (News Scout, Product Tracker, Financial Analyst, Synthesis, Orchestrator) runs in parallel to build a live competitive landscape in under 60 seconds. Major incumbents then become autonomous CEO-style digital twins that react to your acquisition moves, adjudicated round-by-round by a Market Referee agent to produce replayable strategic decision trees.</p>
+            <a href="https://devpost.com/software/rivalis" target="_blank" class="hack-link">View on Devpost ↗</a>
+          </div>
+          <div class="hack-right">
+            <div class="hack-detail-label">Key Design Decisions</div>
+            <div class="hack-detail-item"><span>Parallel agent execution</span> — five specialist agents run concurrently across each discovered competitor, collapsing hours of manual research into a single sub-60s pass.</div>
+            <div class="hack-detail-item"><span>CEO digital twins</span> — six incumbent agents (Microsoft, Alphabet, Amazon, Apple, Meta, Nvidia) parameterized by financial posture, M&A history, and regulatory exposure for realistic war-game reactions.</div>
+            <div class="hack-detail-item"><span>Two-layer audit system</span> — Redis stores what happened (cross-session memory, decision history); W&B Weave explains why it happened (end-to-end traces, hallucination guardrails, eval leaderboards).</div>
+          </div>
+        </div>
+      </div>
 
       <!-- TinyScout — featured, 2-col layout -->
       <div class="hackathon-card featured-hack reveal">
@@ -374,7 +406,6 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
         <a href="https://devpost.com/software/productionagents" target="_blank" class="hack-link">View on Devpost ↗</a>
       </div>
 
-      <!-- Placeholder to avoid blank cell -->
       <div class="hackathon-card reveal reveal-delay-2" style="background:var(--cream);justify-content:center;align-items:center;min-height:200px;">
         <div style="text-align:center;padding:40px 24px;">
           <div style="font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rule-dark);margin-bottom:12px;">Next</div>
