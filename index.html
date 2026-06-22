@@ -247,7 +247,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
       <div class="about-text reveal">
         <p>I'm a <strong>Computer Engineering graduate student at San José State University</strong> with a strong background in full-stack development, ML systems, and agentic AI. My work sits at the intersection of software engineering and machine learning — building systems that are both technically rigorous and practically useful.</p>
         <p>Previously, I collaborated with <strong>Bosch Global Software Technologies</strong> on a large-scale codebase migration research project, designing automated build pipelines and developer tooling for safety-critical systems.</p>
-        <p>I thrive in environments where I can move fast across the stack — from <strong>multi-agent LLM systems</strong> and <strong>RAG pipelines</strong> to Kubernetes deployments and production APIs. Most recently built Rivalis, an agentic competitive intelligence engine with CEO digital twins and war-game simulation.</p> <div class="about-stats">
+        <p>I thrive in environments where I can move fast across the stack — from <strong>multi-agent LLM systems</strong> and <strong>RAG pipelines</strong> to Kubernetes deployments and production APIs. Most recently built Quorum, a deployed Fetch.ai Agentverse validation layer for multi-agent pipelines that uses live web evidence, Redis-backed consistency memory, and LLM reasoning to stop bad claims before they propagate.</p> <div class="about-stats">
           <div class="stat-box"><div class="stat-num">5+</div><div class="stat-label">Production Projects</div></div>
           <div class="stat-box"><div class="stat-num">3.53</div><div class="stat-label">MS GPA @ SJSU</div></div>
           <div class="stat-box"><div class="stat-num">8+</div><div class="stat-label">Languages & Stacks</div></div>
@@ -278,6 +278,9 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
       <span class="skill-tag">LangGraph</span>
       <span class="skill-tag">Vector Search</span>
       <span class="skill-tag">Evidence Gating</span>
+      <span class="skill-tag highlight">Consensus Validation</span>
+      <span class="skill-tag">Claim Verification</span>
+      <span class="skill-tag">Agent Chat Protocol</span>
       <span class="skill-tag">PyTorch</span>
       <span class="skill-tag">PyTorch Geometric</span>
       <span class="skill-tag">XGBoost</span>
@@ -294,6 +297,9 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
       <span class="skill-tag">CopilotKit</span>
       <span class="skill-tag">Streamlit</span>
       <span class="skill-tag">REST APIs</span>
+      <span class="skill-tag highlight">uAgents</span>
+      <span class="skill-tag">WebSocket Streaming</span>
+      <span class="skill-tag">shadcn/ui</span>
       <span class="skill-tag">GraphQL</span>
     </div>
   </div>
@@ -301,6 +307,8 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     <div class="skills-cat-label">Observability & DevOps</div>
     <div class="skills-tags">
       <span class="skill-tag highlight">W&B Weave</span>
+      <span class="skill-tag highlight">Agentverse</span>
+      <span class="skill-tag">Browserbase</span>
       <span class="skill-tag">OpenTelemetry</span>
       <span class="skill-tag">Prometheus</span>
       <span class="skill-tag">Grafana</span>
@@ -315,6 +323,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
     <div class="skills-cat-label">Databases</div>
     <div class="skills-tags">
       <span class="skill-tag highlight">Redis</span>
+      <span class="skill-tag">Redis Cloud</span>
       <span class="skill-tag">PostgreSQL</span>
       <span class="skill-tag">Qdrant</span>
       <span class="skill-tag">MongoDB</span>
@@ -359,6 +368,41 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.08);padding:
       <div class="section-rule"></div>
     </div>
     <div class="hackathon-grid">
+
+      <!-- Quorum — featured -->
+      <div class="hackathon-card featured-hack reveal">
+        <div class="hack-inner">
+          <div class="hack-left">
+            <div class="hack-eyebrow">UC Berkeley AI Hackathon 2026 · Fetch.ai Agentverse Track</div>
+            <div class="hack-project-name">Quorum</div>
+            <div class="hack-tagline">Consensus validation layer for trustworthy multi-agent AI pipelines</div>
+            <div class="hack-meta-row">
+              <span class="hack-date">2026</span>
+              <span class="hack-sep"></span>
+              <span class="hack-badge submitted">Deployed</span>
+            </div>
+            <div class="hack-stack">
+              <span class="stack-tag purple">Anthropic Claude</span>
+              <span class="stack-tag purple">uAgents</span>
+              <span class="stack-tag blue">Agentverse</span>
+              <span class="stack-tag blue">Redis</span>
+              <span class="stack-tag gold">Browserbase</span>
+              <span class="stack-tag">FastAPI</span>
+              <span class="stack-tag">Next.js 15</span>
+              <span class="stack-tag green">WebSockets</span>
+            </div>
+            <p class="hack-desc">A  validation layer that intercepts factual claims before they propagate through a multi-agent workflow and returns a structured consensus verdict. Three independent validators run in parallel: a Browserbase-powered Source Validator for live web evidence, a Redis-backed Consistency Validator for cross-claim memory, and a Claude-powered Reasoning Validator for logical coherence. The consensus engine weights each validator, passes strong claims, blocks weak claims, and quarantines ambiguous claims for human review.</p>
+            <a href="https://agentverse.ai" target="_blank" class="hack-link">Deployed on Agentverse ↗</a>
+          </div>
+          <div class="hack-right">
+            <div class="hack-detail-label">Key Design Decisions</div>
+            <div class="hack-detail-item"><span>Three-validator consensus</span> — source verification, session consistency, and reasoning coherence vote independently before any claim is allowed downstream.</div>
+            <div class="hack-detail-item"><span>Fetch.ai-native deployment</span> — shipped as a discoverable Agentverse agent with mailbox routing and Agent Chat Protocol support for ASI:One queries.</div>
+            <div class="hack-detail-item"><span>Graceful degradation</span> — validators load based on available API keys, Redis failures fall back safely, and network errors never hard-crash the pipeline.</div>
+            <div class="hack-detail-item"><span>Real-time provenance</span> — dashboard streams validator breakdowns, trust scores, quarantine state, and full evidence trails for each claim.</div>
+          </div>
+        </div>
+      </div>
 
       <!-- Rivalis — featured -->
       <div class="hackathon-card featured-hack reveal">
